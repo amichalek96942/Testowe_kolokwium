@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int transformacja(int n);
+
+int main() {
+
+    int check = 0;
+    scanf("%d",&check);
+
+    printf("%d\n", transformacja(check));
+
+
+    return 0;
+}
+
+int transformacja(int n) {
+    if (n % 2 == 0) {
+        return n/2;
+    } else {
+        return (3*n)+1;
+    }
+}
