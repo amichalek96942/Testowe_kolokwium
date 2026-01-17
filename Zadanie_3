@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+// Funkcja rekurencyjna obliczająca sumę elementów tablicy
+int sumaTablicy(int tablica[], int n) {
+    if (n == 0) {
+        return 0; // Warunek stopu: jeśli tablica jest pusta, suma wynosi 0
+    }
+    return tablica[n - 1] + sumaTablicy(tablica, n - 1); // Dodaj ostatni element i rekurencyjnie wyznacz sumę reszty
+}
+
+int main() {
+    int N;
+
+    // Wczytanie rozmiaru tablicy
+    scanf("%d", &N);
+
+    // Deklaracja tablicy o rozmiarze N
+    int tablica[N];
+
+    // Wczytanie N liczb
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &tablica[i]);
+    }
+
+    // Wywołanie funkcji rekurencyjnej
+    int suma = sumaTablicy(tablica, N);
+
+    // Wyświetlenie wyniku
+    printf("Suma: %d\n", suma);
+
+    return 0;
+}
