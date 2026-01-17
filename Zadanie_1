@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+int main() {
+
+    int numer_pokoju = 0;
+
+    scanf("%d", &numer_pokoju);
+
+    int numer_pietra = 0;
+
+    numer_pietra = numer_pokoju / 100;
+
+    if (numer_pokoju >= 100 && numer_pokoju <= 999) {
+        if (numer_pietra % 2 == 0) {
+            printf("Pietro parzyste\n");
+        } else {
+            printf("Pietro nieparzyste\n");
+        }
+    } else {
+        printf("Bledny numer\n");
+    }
+
+    return 0;
+}
