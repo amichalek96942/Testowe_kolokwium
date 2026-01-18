@@ -32,6 +32,7 @@ int main() {
 
     // 5. Zwolnienie pamięci
     free(tablica);
+    tablica = NULL;
 
     return 0;
 }
